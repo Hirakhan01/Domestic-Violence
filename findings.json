@@ -1,0 +1,399 @@
+{
+  "headline": {
+    "latest_year": "2024-25",
+    "domestic_homicides_latest": 111,
+    "domestic_homicides_prior_year": 117,
+    "yoy_change_pct": -5.1,
+    "change_since_2014_pct": -17.2,
+    "female_victim_male_suspect_latest": 71,
+    "female_victim_male_suspect_share_pct": 64.0,
+    "female_victim_male_suspect_change_since_2014_pct": -29.7,
+    "male_victim_female_suspect_latest": 13,
+    "trend_series": {
+      "years": [
+        "2014-15",
+        "2015-16",
+        "2016-17",
+        "2017-18",
+        "2018-19",
+        "2019-20",
+        "2020-21",
+        "2021-22",
+        "2022-23",
+        "2023-24",
+        "2024-25"
+      ],
+      "all_domestic": [
+        134,
+        134,
+        119,
+        113,
+        139,
+        121,
+        117,
+        137,
+        110,
+        117,
+        111
+      ],
+      "female_victim_male_suspect": [
+        101,
+        94,
+        85,
+        87,
+        106,
+        86,
+        76,
+        83,
+        77,
+        81,
+        71
+      ],
+      "male_victim_female_suspect": [
+        8,
+        17,
+        12,
+        11,
+        15,
+        6,
+        10,
+        17,
+        13,
+        11,
+        13
+      ]
+    }
+  },
+  "relationships": {
+    "female_victims": {
+      "total": 155,
+      "breakdown": [
+        {
+          "relationship": "Partner/ex-partner",
+          "acquaintance_status": "Acquainted",
+          "count": 54,
+          "share_pct": 34.8
+        },
+        {
+          "relationship": "No suspect charged",
+          "acquaintance_status": "Not acquainted",
+          "count": 40,
+          "share_pct": 25.8
+        },
+        {
+          "relationship": "Stranger",
+          "acquaintance_status": "Not acquainted",
+          "count": 12,
+          "share_pct": 7.7
+        },
+        {
+          "relationship": "Friend/acquaintance",
+          "acquaintance_status": "Acquainted",
+          "count": 12,
+          "share_pct": 7.7
+        },
+        {
+          "relationship": "Other family",
+          "acquaintance_status": "Acquainted",
+          "count": 12,
+          "share_pct": 7.7
+        },
+        {
+          "relationship": "Parent",
+          "acquaintance_status": "Acquainted",
+          "count": 9,
+          "share_pct": 5.8
+        },
+        {
+          "relationship": "Son or daughter",
+          "acquaintance_status": "Acquainted",
+          "count": 6,
+          "share_pct": 3.9
+        },
+        {
+          "relationship": "Other",
+          "acquaintance_status": "Acquainted",
+          "count": 5,
+          "share_pct": 3.2
+        },
+        {
+          "relationship": "Relationship not known",
+          "acquaintance_status": "Not acquainted",
+          "count": 5,
+          "share_pct": 3.2
+        }
+      ]
+    },
+    "male_victims": {
+      "total": 366,
+      "breakdown": [
+        {
+          "relationship": "No suspect charged",
+          "acquaintance_status": "Not acquainted",
+          "count": 111,
+          "share_pct": 30.3
+        },
+        {
+          "relationship": "Friend/acquaintance",
+          "acquaintance_status": "Acquainted",
+          "count": 71,
+          "share_pct": 19.4
+        },
+        {
+          "relationship": "Stranger",
+          "acquaintance_status": "Not acquainted",
+          "count": 63,
+          "share_pct": 17.2
+        },
+        {
+          "relationship": "Relationship not known",
+          "acquaintance_status": "Not acquainted",
+          "count": 47,
+          "share_pct": 12.8
+        },
+        {
+          "relationship": "Other",
+          "acquaintance_status": "Acquainted",
+          "count": 28,
+          "share_pct": 7.7
+        },
+        {
+          "relationship": "Partner/ex-partner",
+          "acquaintance_status": "Acquainted",
+          "count": 13,
+          "share_pct": 3.6
+        },
+        {
+          "relationship": "Parent",
+          "acquaintance_status": "Acquainted",
+          "count": 13,
+          "share_pct": 3.6
+        },
+        {
+          "relationship": "Son or daughter",
+          "acquaintance_status": "Acquainted",
+          "count": 10,
+          "share_pct": 2.7
+        },
+        {
+          "relationship": "Other family",
+          "acquaintance_status": "Acquainted",
+          "count": 10,
+          "share_pct": 2.7
+        }
+      ]
+    },
+    "partner_homicide_trend": {
+      "years": [
+        "2014-15",
+        "2015-16",
+        "2016-17",
+        "2017-18",
+        "2018-19",
+        "2019-20",
+        "2020-21",
+        "2021-22",
+        "2022-23",
+        "2023-24",
+        "2024-25"
+      ],
+      "counts": [
+        82,
+        76,
+        81,
+        66,
+        89,
+        67,
+        60,
+        61,
+        62,
+        61,
+        54
+      ]
+    }
+  },
+  "justice_gap": {
+    "murder_convictions": {
+      "latest": 158,
+      "earliest": 205,
+      "change_pct": -22.9,
+      "is_decade_low": true,
+      "series": {
+        "years": [
+          "2014-15",
+          "2015-16",
+          "2016-17",
+          "2017-18",
+          "2018-19",
+          "2019-20",
+          "2020-21",
+          "2021-22",
+          "2022-23",
+          "2023-24",
+          "2024-25"
+        ],
+        "counts": [
+          205,
+          231,
+          217,
+          263,
+          271,
+          268,
+          220,
+          276,
+          260,
+          245,
+          158
+        ]
+      }
+    },
+    "no_suspect_charged": {
+      "latest": 134,
+      "earliest": 72,
+      "change_pct": 86.1,
+      "is_decade_high": false,
+      "series": {
+        "years": [
+          "2014-15",
+          "2015-16",
+          "2016-17",
+          "2017-18",
+          "2018-19",
+          "2019-20",
+          "2020-21",
+          "2021-22",
+          "2022-23",
+          "2023-24",
+          "2024-25"
+        ],
+        "counts": [
+          72,
+          78,
+          106,
+          130,
+          133,
+          131,
+          104,
+          137,
+          96,
+          96,
+          134
+        ]
+      }
+    },
+    "conviction_rate_latest_pct": 30.3,
+    "unsolved_rate_latest_pct": 25.7,
+    "suspect_suicide_trend": {
+      "years": [
+        "2014-15",
+        "2015-16",
+        "2016-17",
+        "2017-18",
+        "2018-19",
+        "2019-20",
+        "2020-21",
+        "2021-22",
+        "2022-23",
+        "2023-24",
+        "2024-25"
+      ],
+      "counts": [
+        33,
+        30,
+        29,
+        38,
+        20,
+        22,
+        20,
+        24,
+        19,
+        14,
+        10
+      ],
+      "change_since_2014_pct": -69.7
+    }
+  },
+  "circumstances": {
+    "acquainted_victims_latest_year": {
+      "total": 243,
+      "breakdown": [
+        {
+          "circumstance": "Quarrel, revenge or loss of temper",
+          "count": 144,
+          "share_pct": 59.3
+        },
+        {
+          "circumstance": "Not known",
+          "count": 37,
+          "share_pct": 15.2
+        },
+        {
+          "circumstance": "Other circumstances",
+          "count": 36,
+          "share_pct": 14.8
+        },
+        {
+          "circumstance": "In furtherance of theft or gain",
+          "count": 11,
+          "share_pct": 4.5
+        },
+        {
+          "circumstance": "Irrational act",
+          "count": 11,
+          "share_pct": 4.5
+        },
+        {
+          "circumstance": "Arson",
+          "count": 4,
+          "share_pct": 1.6
+        },
+        {
+          "circumstance": "Restraint/arrest attempt",
+          "count": 0,
+          "share_pct": 0.0
+        },
+        {
+          "circumstance": "Terrorism",
+          "count": 0,
+          "share_pct": 0.0
+        }
+      ]
+    },
+    "quarrel_revenge_trend": {
+      "years": [
+        "2014-15",
+        "2015-16",
+        "2016-17",
+        "2017-18",
+        "2018-19",
+        "2019-20",
+        "2020-21",
+        "2021-22",
+        "2022-23",
+        "2023-24",
+        "2024-25"
+      ],
+      "counts": [
+        177,
+        184,
+        213,
+        227,
+        235,
+        207,
+        208,
+        201,
+        192,
+        185,
+        144
+      ],
+      "change_since_2014_pct": -18.6
+    }
+  },
+  "narrative_points": [
+    "In 2024-25, 111 domestic homicides were recorded in England and Wales \u2014 a fall of 5.1% on the prior year.",
+    "Female victims killed by a male partner or ex-partner account for 64.0% of all domestic homicides in 2024-25 \u2014 the single largest category in the dataset, every year without exception.",
+    "Murder convictions fell to 158 in 2024-25, the lowest figure in the eleven-year series, down 22.9% from 2014-15.",
+    "Cases where no suspect was charged reached 134 in 2024-25 \u2014 the highest figure recorded across the same eleven years.",
+    "Among victims who were acquainted with their suspect, 59.3% of homicides were sparked by quarrel, revenge, or loss of temper \u2014 not premeditation or financial motive."
+  ]
+}

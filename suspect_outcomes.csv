@@ -1,0 +1,111 @@
+outcome_group,outcome_detail,year,count
+Convicted at court,Murder,2014-15,205
+Convicted at court,Murder,2015-16,231
+Convicted at court,Murder,2016-17,217
+Convicted at court,Murder,2017-18,263
+Convicted at court,Murder,2018-19,271
+Convicted at court,Murder,2019-20,268
+Convicted at court,Murder,2020-21,220
+Convicted at court,Murder,2021-22,276
+Convicted at court,Murder,2022-23,260
+Convicted at court,Murder,2023-24,245
+Convicted at court,Murder,2024-25,158
+Convicted at court,Section 2 manslaughter,2014-15,32
+Convicted at court,Section 2 manslaughter,2015-16,32
+Convicted at court,Section 2 manslaughter,2016-17,21
+Convicted at court,Section 2 manslaughter,2017-18,21
+Convicted at court,Section 2 manslaughter,2018-19,24
+Convicted at court,Section 2 manslaughter,2019-20,25
+Convicted at court,Section 2 manslaughter,2020-21,33
+Convicted at court,Section 2 manslaughter,2021-22,40
+Convicted at court,Section 2 manslaughter,2022-23,35
+Convicted at court,Section 2 manslaughter,2023-24,23
+Convicted at court,Section 2 manslaughter,2024-25,6
+Convicted at court,Other manslaughter,2014-15,112
+Convicted at court,Other manslaughter,2015-16,96
+Convicted at court,Other manslaughter,2016-17,128
+Convicted at court,Other manslaughter,2017-18,120
+Convicted at court,Other manslaughter,2018-19,92
+Convicted at court,Other manslaughter,2019-20,132
+Convicted at court,Other manslaughter,2020-21,87
+Convicted at court,Other manslaughter,2021-22,134
+Convicted at court,Other manslaughter,2022-23,100
+Convicted at court,Other manslaughter,2023-24,84
+Convicted at court,Other manslaughter,2024-25,43
+Convicted at court,Infanticide,2014-15,0
+Convicted at court,Infanticide,2015-16,0
+Convicted at court,Infanticide,2016-17,1
+Convicted at court,Infanticide,2017-18,1
+Convicted at court,Infanticide,2018-19,2
+Convicted at court,Infanticide,2019-20,0
+Convicted at court,Infanticide,2020-21,1
+Convicted at court,Infanticide,2021-22,0
+Convicted at court,Infanticide,2022-23,0
+Convicted at court,Infanticide,2023-24,2
+Convicted at court,Infanticide,2024-25,0
+Pending/unresolved,Court decision pending,2014-15,9
+Pending/unresolved,Court decision pending,2015-16,13
+Pending/unresolved,Court decision pending,2016-17,32
+Pending/unresolved,Court decision pending,2017-18,45
+Pending/unresolved,Court decision pending,2018-19,45
+Pending/unresolved,Court decision pending,2019-20,56
+Pending/unresolved,Court decision pending,2020-21,52
+Pending/unresolved,Court decision pending,2021-22,17
+Pending/unresolved,Court decision pending,2022-23,28
+Pending/unresolved,Court decision pending,2023-24,65
+Pending/unresolved,Court decision pending,2024-25,149
+Proceedings not pursued,Suspect found insane,2014-15,4
+Proceedings not pursued,Suspect found insane,2015-16,1
+Proceedings not pursued,Suspect found insane,2016-17,1
+Proceedings not pursued,Suspect found insane,2017-18,3
+Proceedings not pursued,Suspect found insane,2018-19,9
+Proceedings not pursued,Suspect found insane,2019-20,1
+Proceedings not pursued,Suspect found insane,2020-21,10
+Proceedings not pursued,Suspect found insane,2021-22,6
+Proceedings not pursued,Suspect found insane,2022-23,2
+Proceedings not pursued,Suspect found insane,2023-24,5
+Proceedings not pursued,Suspect found insane,2024-25,2
+Proceedings not pursued,Suspect died,2014-15,4
+Proceedings not pursued,Suspect died,2015-16,8
+Proceedings not pursued,Suspect died,2016-17,7
+Proceedings not pursued,Suspect died,2017-18,11
+Proceedings not pursued,Suspect died,2018-19,7
+Proceedings not pursued,Suspect died,2019-20,11
+Proceedings not pursued,Suspect died,2020-21,4
+Proceedings not pursued,Suspect died,2021-22,7
+Proceedings not pursued,Suspect died,2022-23,8
+Proceedings not pursued,Suspect died,2023-24,8
+Proceedings not pursued,Suspect died,2024-25,2
+Proceedings not pursued,Suspect died by suicide,2014-15,33
+Proceedings not pursued,Suspect died by suicide,2015-16,30
+Proceedings not pursued,Suspect died by suicide,2016-17,29
+Proceedings not pursued,Suspect died by suicide,2017-18,38
+Proceedings not pursued,Suspect died by suicide,2018-19,20
+Proceedings not pursued,Suspect died by suicide,2019-20,22
+Proceedings not pursued,Suspect died by suicide,2020-21,20
+Proceedings not pursued,Suspect died by suicide,2021-22,24
+Proceedings not pursued,Suspect died by suicide,2022-23,19
+Proceedings not pursued,Suspect died by suicide,2023-24,14
+Proceedings not pursued,Suspect died by suicide,2024-25,10
+Proceedings not pursued,Proceedings discontinued,2014-15,33
+Proceedings not pursued,Proceedings discontinued,2015-16,49
+Proceedings not pursued,Proceedings discontinued,2016-17,147
+Proceedings not pursued,Proceedings discontinued,2017-18,66
+Proceedings not pursued,Proceedings discontinued,2018-19,38
+Proceedings not pursued,Proceedings discontinued,2019-20,30
+Proceedings not pursued,Proceedings discontinued,2020-21,24
+Proceedings not pursued,Proceedings discontinued,2021-22,31
+Proceedings not pursued,Proceedings discontinued,2022-23,33
+Proceedings not pursued,Proceedings discontinued,2023-24,24
+Proceedings not pursued,Proceedings discontinued,2024-25,18
+No justice,No suspects charged,2014-15,72
+No justice,No suspects charged,2015-16,78
+No justice,No suspects charged,2016-17,106
+No justice,No suspects charged,2017-18,130
+No justice,No suspects charged,2018-19,133
+No justice,No suspects charged,2019-20,131
+No justice,No suspects charged,2020-21,104
+No justice,No suspects charged,2021-22,137
+No justice,No suspects charged,2022-23,96
+No justice,No suspects charged,2023-24,96
+No justice,No suspects charged,2024-25,134

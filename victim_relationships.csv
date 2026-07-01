@@ -1,0 +1,199 @@
+victim_sex,acquaintance_status,relationship,year,count
+Male,Acquainted,Son or daughter,2014-15,22
+Male,Acquainted,Son or daughter,2015-16,9
+Male,Acquainted,Son or daughter,2016-17,23
+Male,Acquainted,Son or daughter,2017-18,17
+Male,Acquainted,Son or daughter,2018-19,13
+Male,Acquainted,Son or daughter,2019-20,13
+Male,Acquainted,Son or daughter,2020-21,21
+Male,Acquainted,Son or daughter,2021-22,21
+Male,Acquainted,Son or daughter,2022-23,16
+Male,Acquainted,Son or daughter,2023-24,14
+Male,Acquainted,Son or daughter,2024-25,10
+Male,Acquainted,Parent,2014-15,11
+Male,Acquainted,Parent,2015-16,12
+Male,Acquainted,Parent,2016-17,5
+Male,Acquainted,Parent,2017-18,8
+Male,Acquainted,Parent,2018-19,4
+Male,Acquainted,Parent,2019-20,13
+Male,Acquainted,Parent,2020-21,14
+Male,Acquainted,Parent,2021-22,19
+Male,Acquainted,Parent,2022-23,7
+Male,Acquainted,Parent,2023-24,7
+Male,Acquainted,Parent,2024-25,13
+Male,Acquainted,Partner/ex-partner,2014-15,11
+Male,Acquainted,Partner/ex-partner,2015-16,17
+Male,Acquainted,Partner/ex-partner,2016-17,13
+Male,Acquainted,Partner/ex-partner,2017-18,8
+Male,Acquainted,Partner/ex-partner,2018-19,15
+Male,Acquainted,Partner/ex-partner,2019-20,9
+Male,Acquainted,Partner/ex-partner,2020-21,9
+Male,Acquainted,Partner/ex-partner,2021-22,17
+Male,Acquainted,Partner/ex-partner,2022-23,14
+Male,Acquainted,Partner/ex-partner,2023-24,10
+Male,Acquainted,Partner/ex-partner,2024-25,13
+Male,Acquainted,Other family,2014-15,11
+Male,Acquainted,Other family,2015-16,7
+Male,Acquainted,Other family,2016-17,12
+Male,Acquainted,Other family,2017-18,7
+Male,Acquainted,Other family,2018-19,12
+Male,Acquainted,Other family,2019-20,11
+Male,Acquainted,Other family,2020-21,16
+Male,Acquainted,Other family,2021-22,16
+Male,Acquainted,Other family,2022-23,10
+Male,Acquainted,Other family,2023-24,11
+Male,Acquainted,Other family,2024-25,10
+Male,Acquainted,Friend/acquaintance,2014-15,85
+Male,Acquainted,Friend/acquaintance,2015-16,92
+Male,Acquainted,Friend/acquaintance,2016-17,111
+Male,Acquainted,Friend/acquaintance,2017-18,116
+Male,Acquainted,Friend/acquaintance,2018-19,109
+Male,Acquainted,Friend/acquaintance,2019-20,111
+Male,Acquainted,Friend/acquaintance,2020-21,105
+Male,Acquainted,Friend/acquaintance,2021-22,95
+Male,Acquainted,Friend/acquaintance,2022-23,109
+Male,Acquainted,Friend/acquaintance,2023-24,98
+Male,Acquainted,Friend/acquaintance,2024-25,71
+Male,Acquainted,Other,2014-15,41
+Male,Acquainted,Other,2015-16,42
+Male,Acquainted,Other,2016-17,40
+Male,Acquainted,Other,2017-18,41
+Male,Acquainted,Other,2018-19,57
+Male,Acquainted,Other,2019-20,50
+Male,Acquainted,Other,2020-21,30
+Male,Acquainted,Other,2021-22,46
+Male,Acquainted,Other,2022-23,34
+Male,Acquainted,Other,2023-24,33
+Male,Acquainted,Other,2024-25,28
+Male,Not acquainted,Stranger,2014-15,57
+Male,Not acquainted,Stranger,2015-16,61
+Male,Not acquainted,Stranger,2016-17,69
+Male,Not acquainted,Stranger,2017-18,104
+Male,Not acquainted,Stranger,2018-19,72
+Male,Not acquainted,Stranger,2019-20,124
+Male,Not acquainted,Stranger,2020-21,67
+Male,Not acquainted,Stranger,2021-22,73
+Male,Not acquainted,Stranger,2022-23,81
+Male,Not acquainted,Stranger,2023-24,82
+Male,Not acquainted,Stranger,2024-25,63
+Male,Not acquainted,Relationship not known,2014-15,17
+Male,Not acquainted,Relationship not known,2015-16,27
+Male,Not acquainted,Relationship not known,2016-17,35
+Male,Not acquainted,Relationship not known,2017-18,37
+Male,Not acquainted,Relationship not known,2018-19,25
+Male,Not acquainted,Relationship not known,2019-20,41
+Male,Not acquainted,Relationship not known,2020-21,41
+Male,Not acquainted,Relationship not known,2021-22,80
+Male,Not acquainted,Relationship not known,2022-23,50
+Male,Not acquainted,Relationship not known,2023-24,74
+Male,Not acquainted,Relationship not known,2024-25,47
+Male,Not acquainted,No suspect charged,2014-15,64
+Male,Not acquainted,No suspect charged,2015-16,96
+Male,Not acquainted,No suspect charged,2016-17,207
+Male,Not acquainted,No suspect charged,2017-18,145
+Male,Not acquainted,No suspect charged,2018-19,111
+Male,Not acquainted,No suspect charged,2019-20,121
+Male,Not acquainted,No suspect charged,2020-21,92
+Male,Not acquainted,No suspect charged,2021-22,119
+Male,Not acquainted,No suspect charged,2022-23,84
+Male,Not acquainted,No suspect charged,2023-24,79
+Male,Not acquainted,No suspect charged,2024-25,111
+Female,Acquainted,Son or daughter,2014-15,16
+Female,Acquainted,Son or daughter,2015-16,14
+Female,Acquainted,Son or daughter,2016-17,11
+Female,Acquainted,Son or daughter,2017-18,12
+Female,Acquainted,Son or daughter,2018-19,19
+Female,Acquainted,Son or daughter,2019-20,7
+Female,Acquainted,Son or daughter,2020-21,20
+Female,Acquainted,Son or daughter,2021-22,5
+Female,Acquainted,Son or daughter,2022-23,9
+Female,Acquainted,Son or daughter,2023-24,15
+Female,Acquainted,Son or daughter,2024-25,6
+Female,Acquainted,Parent,2014-15,13
+Female,Acquainted,Parent,2015-16,11
+Female,Acquainted,Parent,2016-17,3
+Female,Acquainted,Parent,2017-18,13
+Female,Acquainted,Parent,2018-19,13
+Female,Acquainted,Parent,2019-20,18
+Female,Acquainted,Parent,2020-21,11
+Female,Acquainted,Parent,2021-22,20
+Female,Acquainted,Parent,2022-23,13
+Female,Acquainted,Parent,2023-24,17
+Female,Acquainted,Parent,2024-25,9
+Female,Acquainted,Partner/ex-partner,2014-15,82
+Female,Acquainted,Partner/ex-partner,2015-16,76
+Female,Acquainted,Partner/ex-partner,2016-17,81
+Female,Acquainted,Partner/ex-partner,2017-18,66
+Female,Acquainted,Partner/ex-partner,2018-19,89
+Female,Acquainted,Partner/ex-partner,2019-20,67
+Female,Acquainted,Partner/ex-partner,2020-21,60
+Female,Acquainted,Partner/ex-partner,2021-22,61
+Female,Acquainted,Partner/ex-partner,2022-23,62
+Female,Acquainted,Partner/ex-partner,2023-24,61
+Female,Acquainted,Partner/ex-partner,2024-25,54
+Female,Acquainted,Other family,2014-15,5
+Female,Acquainted,Other family,2015-16,10
+Female,Acquainted,Other family,2016-17,7
+Female,Acquainted,Other family,2017-18,10
+Female,Acquainted,Other family,2018-19,7
+Female,Acquainted,Other family,2019-20,3
+Female,Acquainted,Other family,2020-21,5
+Female,Acquainted,Other family,2021-22,4
+Female,Acquainted,Other family,2022-23,5
+Female,Acquainted,Other family,2023-24,8
+Female,Acquainted,Other family,2024-25,12
+Female,Acquainted,Friend/acquaintance,2014-15,10
+Female,Acquainted,Friend/acquaintance,2015-16,15
+Female,Acquainted,Friend/acquaintance,2016-17,14
+Female,Acquainted,Friend/acquaintance,2017-18,17
+Female,Acquainted,Friend/acquaintance,2018-19,18
+Female,Acquainted,Friend/acquaintance,2019-20,17
+Female,Acquainted,Friend/acquaintance,2020-21,10
+Female,Acquainted,Friend/acquaintance,2021-22,23
+Female,Acquainted,Friend/acquaintance,2022-23,23
+Female,Acquainted,Friend/acquaintance,2023-24,4
+Female,Acquainted,Friend/acquaintance,2024-25,12
+Female,Acquainted,Other,2014-15,8
+Female,Acquainted,Other,2015-16,10
+Female,Acquainted,Other,2016-17,3
+Female,Acquainted,Other,2017-18,10
+Female,Acquainted,Other,2018-19,8
+Female,Acquainted,Other,2019-20,5
+Female,Acquainted,Other,2020-21,9
+Female,Acquainted,Other,2021-22,4
+Female,Acquainted,Other,2022-23,5
+Female,Acquainted,Other,2023-24,8
+Female,Acquainted,Other,2024-25,5
+Female,Not acquainted,Stranger,2014-15,11
+Female,Not acquainted,Stranger,2015-16,6
+Female,Not acquainted,Stranger,2016-17,10
+Female,Not acquainted,Stranger,2017-18,34
+Female,Not acquainted,Stranger,2018-19,10
+Female,Not acquainted,Stranger,2019-20,23
+Female,Not acquainted,Stranger,2020-21,9
+Female,Not acquainted,Stranger,2021-22,17
+Female,Not acquainted,Stranger,2022-23,14
+Female,Not acquainted,Stranger,2023-24,7
+Female,Not acquainted,Stranger,2024-25,12
+Female,Not acquainted,Relationship not known,2014-15,4
+Female,Not acquainted,Relationship not known,2015-16,8
+Female,Not acquainted,Relationship not known,2016-17,5
+Female,Not acquainted,Relationship not known,2017-18,6
+Female,Not acquainted,Relationship not known,2018-19,5
+Female,Not acquainted,Relationship not known,2019-20,3
+Female,Not acquainted,Relationship not known,2020-21,4
+Female,Not acquainted,Relationship not known,2021-22,6
+Female,Not acquainted,Relationship not known,2022-23,4
+Female,Not acquainted,Relationship not known,2023-24,2
+Female,Not acquainted,Relationship not known,2024-25,5
+Female,Not acquainted,No suspect charged,2014-15,35
+Female,Not acquainted,No suspect charged,2015-16,24
+Female,Not acquainted,No suspect charged,2016-17,40
+Female,Not acquainted,No suspect charged,2017-18,47
+Female,Not acquainted,No suspect charged,2018-19,53
+Female,Not acquainted,No suspect charged,2019-20,39
+Female,Not acquainted,No suspect charged,2020-21,30
+Female,Not acquainted,No suspect charged,2021-22,46
+Female,Not acquainted,No suspect charged,2022-23,41
+Female,Not acquainted,No suspect charged,2023-24,36
+Female,Not acquainted,No suspect charged,2024-25,40

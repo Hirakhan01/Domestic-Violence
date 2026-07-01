@@ -1,0 +1,265 @@
+relationship_group,circumstance,year,count
+Victim acquainted,"Quarrel, revenge or loss of temper",2014-15,177
+Victim acquainted,"Quarrel, revenge or loss of temper",2015-16,184
+Victim acquainted,"Quarrel, revenge or loss of temper",2016-17,213
+Victim acquainted,"Quarrel, revenge or loss of temper",2017-18,227
+Victim acquainted,"Quarrel, revenge or loss of temper",2018-19,235
+Victim acquainted,"Quarrel, revenge or loss of temper",2019-20,207
+Victim acquainted,"Quarrel, revenge or loss of temper",2020-21,208
+Victim acquainted,"Quarrel, revenge or loss of temper",2021-22,201
+Victim acquainted,"Quarrel, revenge or loss of temper",2022-23,192
+Victim acquainted,"Quarrel, revenge or loss of temper",2023-24,185
+Victim acquainted,"Quarrel, revenge or loss of temper",2024-25,144
+Victim acquainted,In furtherance of theft or gain,2014-15,12
+Victim acquainted,In furtherance of theft or gain,2015-16,18
+Victim acquainted,In furtherance of theft or gain,2016-17,16
+Victim acquainted,In furtherance of theft or gain,2017-18,25
+Victim acquainted,In furtherance of theft or gain,2018-19,25
+Victim acquainted,In furtherance of theft or gain,2019-20,23
+Victim acquainted,In furtherance of theft or gain,2020-21,11
+Victim acquainted,In furtherance of theft or gain,2021-22,21
+Victim acquainted,In furtherance of theft or gain,2022-23,11
+Victim acquainted,In furtherance of theft or gain,2023-24,14
+Victim acquainted,In furtherance of theft or gain,2024-25,11
+Victim acquainted,Terrorism,2014-15,0
+Victim acquainted,Terrorism,2015-16,0
+Victim acquainted,Terrorism,2016-17,0
+Victim acquainted,Terrorism,2017-18,0
+Victim acquainted,Terrorism,2018-19,0
+Victim acquainted,Terrorism,2019-20,0
+Victim acquainted,Terrorism,2020-21,0
+Victim acquainted,Terrorism,2021-22,0
+Victim acquainted,Terrorism,2022-23,0
+Victim acquainted,Terrorism,2023-24,0
+Victim acquainted,Terrorism,2024-25,0
+Victim acquainted,Restraint/arrest attempt,2014-15,0
+Victim acquainted,Restraint/arrest attempt,2015-16,0
+Victim acquainted,Restraint/arrest attempt,2016-17,0
+Victim acquainted,Restraint/arrest attempt,2017-18,0
+Victim acquainted,Restraint/arrest attempt,2018-19,0
+Victim acquainted,Restraint/arrest attempt,2019-20,0
+Victim acquainted,Restraint/arrest attempt,2020-21,0
+Victim acquainted,Restraint/arrest attempt,2021-22,0
+Victim acquainted,Restraint/arrest attempt,2022-23,0
+Victim acquainted,Restraint/arrest attempt,2023-24,0
+Victim acquainted,Restraint/arrest attempt,2024-25,0
+Victim acquainted,Arson,2014-15,3
+Victim acquainted,Arson,2015-16,3
+Victim acquainted,Arson,2016-17,0
+Victim acquainted,Arson,2017-18,3
+Victim acquainted,Arson,2018-19,3
+Victim acquainted,Arson,2019-20,5
+Victim acquainted,Arson,2020-21,1
+Victim acquainted,Arson,2021-22,3
+Victim acquainted,Arson,2022-23,4
+Victim acquainted,Arson,2023-24,0
+Victim acquainted,Arson,2024-25,4
+Victim acquainted,Other circumstances,2014-15,53
+Victim acquainted,Other circumstances,2015-16,48
+Victim acquainted,Other circumstances,2016-17,39
+Victim acquainted,Other circumstances,2017-18,41
+Victim acquainted,Other circumstances,2018-19,54
+Victim acquainted,Other circumstances,2019-20,38
+Victim acquainted,Other circumstances,2020-21,35
+Victim acquainted,Other circumstances,2021-22,55
+Victim acquainted,Other circumstances,2022-23,54
+Victim acquainted,Other circumstances,2023-24,35
+Victim acquainted,Other circumstances,2024-25,36
+Victim acquainted,Irrational act,2014-15,35
+Victim acquainted,Irrational act,2015-16,29
+Victim acquainted,Irrational act,2016-17,21
+Victim acquainted,Irrational act,2017-18,18
+Victim acquainted,Irrational act,2018-19,26
+Victim acquainted,Irrational act,2019-20,20
+Victim acquainted,Irrational act,2020-21,30
+Victim acquainted,Irrational act,2021-22,15
+Victim acquainted,Irrational act,2022-23,17
+Victim acquainted,Irrational act,2023-24,15
+Victim acquainted,Irrational act,2024-25,11
+Victim acquainted,Not known,2014-15,35
+Victim acquainted,Not known,2015-16,33
+Victim acquainted,Not known,2016-17,34
+Victim acquainted,Not known,2017-18,11
+Victim acquainted,Not known,2018-19,21
+Victim acquainted,Not known,2019-20,32
+Victim acquainted,Not known,2020-21,25
+Victim acquainted,Not known,2021-22,36
+Victim acquainted,Not known,2022-23,29
+Victim acquainted,Not known,2023-24,37
+Victim acquainted,Not known,2024-25,37
+Victim not acquainted,"Quarrel, revenge or loss of temper",2014-15,71
+Victim not acquainted,"Quarrel, revenge or loss of temper",2015-16,91
+Victim not acquainted,"Quarrel, revenge or loss of temper",2016-17,119
+Victim not acquainted,"Quarrel, revenge or loss of temper",2017-18,144
+Victim not acquainted,"Quarrel, revenge or loss of temper",2018-19,126
+Victim not acquainted,"Quarrel, revenge or loss of temper",2019-20,153
+Victim not acquainted,"Quarrel, revenge or loss of temper",2020-21,111
+Victim not acquainted,"Quarrel, revenge or loss of temper",2021-22,164
+Victim not acquainted,"Quarrel, revenge or loss of temper",2022-23,108
+Victim not acquainted,"Quarrel, revenge or loss of temper",2023-24,123
+Victim not acquainted,"Quarrel, revenge or loss of temper",2024-25,122
+Victim not acquainted,In furtherance of theft or gain,2014-15,12
+Victim not acquainted,In furtherance of theft or gain,2015-16,10
+Victim not acquainted,In furtherance of theft or gain,2016-17,16
+Victim not acquainted,In furtherance of theft or gain,2017-18,27
+Victim not acquainted,In furtherance of theft or gain,2018-19,23
+Victim not acquainted,In furtherance of theft or gain,2019-20,19
+Victim not acquainted,In furtherance of theft or gain,2020-21,14
+Victim not acquainted,In furtherance of theft or gain,2021-22,15
+Victim not acquainted,In furtherance of theft or gain,2022-23,22
+Victim not acquainted,In furtherance of theft or gain,2023-24,22
+Victim not acquainted,In furtherance of theft or gain,2024-25,16
+Victim not acquainted,Terrorism,2014-15,0
+Victim not acquainted,Terrorism,2015-16,1
+Victim not acquainted,Terrorism,2016-17,5
+Victim not acquainted,Terrorism,2017-18,32
+Victim not acquainted,Terrorism,2018-19,0
+Victim not acquainted,Terrorism,2019-20,2
+Victim not acquainted,Terrorism,2020-21,0
+Victim not acquainted,Terrorism,2021-22,1
+Victim not acquainted,Terrorism,2022-23,0
+Victim not acquainted,Terrorism,2023-24,1
+Victim not acquainted,Terrorism,2024-25,0
+Victim not acquainted,Restraint/arrest attempt,2014-15,0
+Victim not acquainted,Restraint/arrest attempt,2015-16,0
+Victim not acquainted,Restraint/arrest attempt,2016-17,0
+Victim not acquainted,Restraint/arrest attempt,2017-18,1
+Victim not acquainted,Restraint/arrest attempt,2018-19,0
+Victim not acquainted,Restraint/arrest attempt,2019-20,2
+Victim not acquainted,Restraint/arrest attempt,2020-21,0
+Victim not acquainted,Restraint/arrest attempt,2021-22,2
+Victim not acquainted,Restraint/arrest attempt,2022-23,1
+Victim not acquainted,Restraint/arrest attempt,2023-24,0
+Victim not acquainted,Restraint/arrest attempt,2024-25,0
+Victim not acquainted,Arson,2014-15,0
+Victim not acquainted,Arson,2015-16,5
+Victim not acquainted,Arson,2016-17,6
+Victim not acquainted,Arson,2017-18,5
+Victim not acquainted,Arson,2018-19,5
+Victim not acquainted,Arson,2019-20,3
+Victim not acquainted,Arson,2020-21,0
+Victim not acquainted,Arson,2021-22,2
+Victim not acquainted,Arson,2022-23,1
+Victim not acquainted,Arson,2023-24,4
+Victim not acquainted,Arson,2024-25,6
+Victim not acquainted,Other circumstances,2014-15,62
+Victim not acquainted,Other circumstances,2015-16,58
+Victim not acquainted,Other circumstances,2016-17,160
+Victim not acquainted,Other circumstances,2017-18,80
+Victim not acquainted,Other circumstances,2018-19,58
+Victim not acquainted,Other circumstances,2019-20,108
+Victim not acquainted,Other circumstances,2020-21,59
+Victim not acquainted,Other circumstances,2021-22,75
+Victim not acquainted,Other circumstances,2022-23,70
+Victim not acquainted,Other circumstances,2023-24,61
+Victim not acquainted,Other circumstances,2024-25,72
+Victim not acquainted,Irrational act,2014-15,2
+Victim not acquainted,Irrational act,2015-16,7
+Victim not acquainted,Irrational act,2016-17,7
+Victim not acquainted,Irrational act,2017-18,9
+Victim not acquainted,Irrational act,2018-19,12
+Victim not acquainted,Irrational act,2019-20,12
+Victim not acquainted,Irrational act,2020-21,14
+Victim not acquainted,Irrational act,2021-22,7
+Victim not acquainted,Irrational act,2022-23,15
+Victim not acquainted,Irrational act,2023-24,11
+Victim not acquainted,Irrational act,2024-25,11
+Victim not acquainted,Not known,2014-15,42
+Victim not acquainted,Not known,2015-16,51
+Victim not acquainted,Not known,2016-17,53
+Victim not acquainted,Not known,2017-18,75
+Victim not acquainted,Not known,2018-19,53
+Victim not acquainted,Not known,2019-20,52
+Victim not acquainted,Not known,2020-21,47
+Victim not acquainted,Not known,2021-22,75
+Victim not acquainted,Not known,2022-23,57
+Victim not acquainted,Not known,2023-24,58
+Victim not acquainted,Not known,2024-25,52
+All victims,"Quarrel, revenge or loss of temper",2014-15,248
+All victims,"Quarrel, revenge or loss of temper",2015-16,275
+All victims,"Quarrel, revenge or loss of temper",2016-17,332
+All victims,"Quarrel, revenge or loss of temper",2017-18,371
+All victims,"Quarrel, revenge or loss of temper",2018-19,361
+All victims,"Quarrel, revenge or loss of temper",2019-20,360
+All victims,"Quarrel, revenge or loss of temper",2020-21,319
+All victims,"Quarrel, revenge or loss of temper",2021-22,365
+All victims,"Quarrel, revenge or loss of temper",2022-23,300
+All victims,"Quarrel, revenge or loss of temper",2023-24,308
+All victims,"Quarrel, revenge or loss of temper",2024-25,266
+All victims,In furtherance of theft or gain,2014-15,24
+All victims,In furtherance of theft or gain,2015-16,28
+All victims,In furtherance of theft or gain,2016-17,32
+All victims,In furtherance of theft or gain,2017-18,52
+All victims,In furtherance of theft or gain,2018-19,48
+All victims,In furtherance of theft or gain,2019-20,42
+All victims,In furtherance of theft or gain,2020-21,25
+All victims,In furtherance of theft or gain,2021-22,36
+All victims,In furtherance of theft or gain,2022-23,33
+All victims,In furtherance of theft or gain,2023-24,36
+All victims,In furtherance of theft or gain,2024-25,27
+All victims,Terrorism,2014-15,0
+All victims,Terrorism,2015-16,1
+All victims,Terrorism,2016-17,5
+All victims,Terrorism,2017-18,32
+All victims,Terrorism,2018-19,0
+All victims,Terrorism,2019-20,2
+All victims,Terrorism,2020-21,0
+All victims,Terrorism,2021-22,1
+All victims,Terrorism,2022-23,0
+All victims,Terrorism,2023-24,1
+All victims,Terrorism,2024-25,0
+All victims,Restraint/arrest attempt,2014-15,0
+All victims,Restraint/arrest attempt,2015-16,0
+All victims,Restraint/arrest attempt,2016-17,0
+All victims,Restraint/arrest attempt,2017-18,1
+All victims,Restraint/arrest attempt,2018-19,0
+All victims,Restraint/arrest attempt,2019-20,2
+All victims,Restraint/arrest attempt,2020-21,0
+All victims,Restraint/arrest attempt,2021-22,2
+All victims,Restraint/arrest attempt,2022-23,1
+All victims,Restraint/arrest attempt,2023-24,0
+All victims,Restraint/arrest attempt,2024-25,0
+All victims,Arson,2014-15,3
+All victims,Arson,2015-16,8
+All victims,Arson,2016-17,6
+All victims,Arson,2017-18,8
+All victims,Arson,2018-19,8
+All victims,Arson,2019-20,8
+All victims,Arson,2020-21,1
+All victims,Arson,2021-22,5
+All victims,Arson,2022-23,5
+All victims,Arson,2023-24,4
+All victims,Arson,2024-25,10
+All victims,Other circumstances,2014-15,115
+All victims,Other circumstances,2015-16,106
+All victims,Other circumstances,2016-17,199
+All victims,Other circumstances,2017-18,121
+All victims,Other circumstances,2018-19,112
+All victims,Other circumstances,2019-20,146
+All victims,Other circumstances,2020-21,94
+All victims,Other circumstances,2021-22,130
+All victims,Other circumstances,2022-23,124
+All victims,Other circumstances,2023-24,96
+All victims,Other circumstances,2024-25,108
+All victims,Irrational act,2014-15,37
+All victims,Irrational act,2015-16,36
+All victims,Irrational act,2016-17,28
+All victims,Irrational act,2017-18,27
+All victims,Irrational act,2018-19,38
+All victims,Irrational act,2019-20,32
+All victims,Irrational act,2020-21,44
+All victims,Irrational act,2021-22,22
+All victims,Irrational act,2022-23,32
+All victims,Irrational act,2023-24,26
+All victims,Irrational act,2024-25,22
+All victims,Not known,2014-15,77
+All victims,Not known,2015-16,84
+All victims,Not known,2016-17,87
+All victims,Not known,2017-18,86
+All victims,Not known,2018-19,74
+All victims,Not known,2019-20,84
+All victims,Not known,2020-21,72
+All victims,Not known,2021-22,111
+All victims,Not known,2022-23,86
+All victims,Not known,2023-24,95
+All victims,Not known,2024-25,89

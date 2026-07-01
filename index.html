@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Case File — Domestic Homicide in England &amp; Wales</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EFEAE0;
+    --card:#F7F3E9;
+    --ink:#211F1C;
+    --ink-mute:#6B665A;
+    --rule:#C9BFA8;
+    --rule-strong:#A89F8C;
+    --stamp:#8C2F2A;
+    --stamp-bg:#F3E3DF;
+    --sage:#54624A;
+    --sage-bg:#E7EBE0;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px; margin:0 auto; padding:0 28px 80px;}
+  header.top{
+    border-bottom:2px solid var(--ink);
+    padding:28px 0 14px;
+    display:flex; justify-content:space-between; align-items:flex-end;
+  }
+  .case-label{
+    font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em;
+    color:var(--ink-mute); text-transform:uppercase; margin-bottom:6px;
+  }
+  h1.title{
+    font-family:'Spectral',serif; font-weight:600; font-size:30px; margin:0;
+    letter-spacing:-.01em;
+  }
+  .meta-block{ text-align:right; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-mute); line-height:1.6;}
+  nav.tabs{
+    display:flex; gap:2px; margin-top:0;
+  }
+  .tab{ flex:0 1 auto; }
+  .tab{
+    font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.06em;
+    text-transform:uppercase; padding:11px 18px 9px; cursor:pointer;
+    background:#E2DBC9; color:var(--ink-mute); border:1px solid var(--rule);
+    border-bottom:none; position:relative; top:1px; white-space:nowrap;
+    clip-path: polygon(8px 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .tab.active{
+    background:var(--card); color:var(--ink); border-color:var(--ink);
+    font-weight:500;
+  }
+  .panel{
+    background:var(--card); border:1px solid var(--ink); border-top:none;
+    padding:32px 32px 36px; display:none;
+  }
+  .panel.active{display:block;}
+  h2.page-head{
+    font-family:'Spectral',serif; font-size:22px; font-weight:600; margin:0 0 4px;
+  }
+  p.page-sub{ color:var(--ink-mute); font-size:13.5px; margin:0 0 26px; line-height:1.6;}
+  .kpi-row{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin-bottom:30px;}
+  .kpi{
+    border:1px solid var(--rule); padding:14px 16px; background:var(--paper);
+    position:relative;
+  }
+  .kpi .label{font-family:'IBM Plex Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.07em; color:var(--ink-mute); margin-bottom:6px;}
+  .kpi .value{font-family:'Spectral',serif; font-size:28px; font-weight:600; line-height:1;}
+  .kpi .delta{font-size:12px; margin-top:6px; color:var(--ink-mute);}
+  .kpi .delta.down{color:var(--sage);}
+  .kpi .delta.up{color:var(--stamp);}
+  .stamp{
+    display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:10px;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--stamp);
+    border:1.5px solid var(--stamp); padding:3px 8px; transform:rotate(-3deg);
+    margin-top:8px; background:var(--stamp-bg);
+  }
+  .stamp.sage{color:var(--sage); border-color:var(--sage); background:var(--sage-bg);}
+  .section{margin-bottom:34px;}
+  .section h3{
+    font-family:'Spectral',serif; font-size:16px; font-weight:600; margin:0 0 4px;
+    border-bottom:1px solid var(--rule); padding-bottom:8px;
+  }
+  .section .note{font-size:12.5px; color:var(--ink-mute); margin:6px 0 16px;}
+  .chart-box{ position:relative; height:280px; margin:14px 0 6px;}
+  .chart-box.short{height:220px;}
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:26px;}
+  @media(max-width:680px){.two-col{grid-template-columns:1fr;}}
+  table.breakdown{ width:100%; border-collapse:collapse; font-size:13px; margin-top:8px;}
+  table.breakdown th{
+    text-align:left; font-family:'IBM Plex Mono',monospace; font-size:10.5px;
+    text-transform:uppercase; letter-spacing:.05em; color:var(--ink-mute);
+    border-bottom:1px solid var(--ink); padding:6px 8px 8px;
+  }
+  table.breakdown td{ padding:7px 8px; border-bottom:1px solid var(--rule);}
+  table.breakdown td.num{font-family:'IBM Plex Mono',monospace; text-align:right;}
+  .bar-track{ background:var(--paper); border:1px solid var(--rule); height:8px; width:100%; margin-top:4px;}
+  .bar-fill{ background:var(--sage); height:100%;}
+  .legend-row{display:flex; gap:18px; font-size:12px; color:var(--ink-mute); margin:4px 0 2px; flex-wrap:wrap;}
+  .legend-row span{display:flex; align-items:center; gap:6px;}
+  .swatch{width:10px; height:10px; display:inline-block;}
+  .narrative{
+    font-family:'Spectral',serif; font-size:15px; line-height:1.7; color:var(--ink);
+    border-left:3px solid var(--stamp); padding:4px 0 4px 16px; margin:14px 0;
+  }
+  footer.foot{
+    margin-top:18px; font-family:'IBM Plex Mono',monospace; font-size:10.5px;
+    color:var(--ink-mute); text-align:center; line-height:1.8;
+  }
+
+  /* filter bar */
+  .filter-bar{
+    display:flex; align-items:center; gap:12px; margin:14px 0 0;
+    font-family:'IBM Plex Mono',monospace; font-size:11px;
+  }
+  .filter-bar .fl-label{ color:var(--ink-mute); text-transform:uppercase; letter-spacing:.08em;}
+  .filter-bar .fl-opt{
+    padding:6px 12px; border:1px solid var(--rule-strong); cursor:pointer;
+    color:var(--ink-mute); background:var(--paper); text-transform:uppercase; letter-spacing:.05em;
+  }
+  .filter-bar .fl-opt.active{ background:var(--ink); color:var(--paper); border-color:var(--ink);}
+  .filter-note{ font-size:11.5px; color:var(--ink-mute); font-style:italic; margin:6px 0 0;}
+
+  /* evidence tag — annotated callout */
+  .evi-wrap{ position:relative; }
+  .evi-tag{
+    position:absolute; font-family:'IBM Plex Mono',monospace; font-size:10px;
+    color:var(--stamp); white-space:nowrap; transform:rotate(-2deg);
+    letter-spacing:.02em;
+  }
+  .evi-tag::before{
+    content:''; position:absolute; border-top:1px dotted var(--stamp);
+  }
+  .evi-tag.kpi64{ top:-13px; right:10px; }
+  .evi-tag.kpi64::before{ top:7px; left:-34px; width:30px; }
+  .evi-tag.gapnarrow{ top:8px; right:6px; text-align:right; }
+  .evi-tag.gapnarrow::before{ top:7px; right:-30px; width:26px; }
+
+  /* analyst note */
+  .analyst-note{
+    border:1px dashed var(--rule-strong); background:var(--paper);
+    padding:16px 18px 14px; margin:18px 0 4px; position:relative;
+  }
+  .analyst-note p{
+    font-family:'Spectral',serif; font-size:14px; line-height:1.7; margin:0 0 10px; color:var(--ink);
+  }
+  .analyst-sig{
+    display:flex; justify-content:space-between; align-items:center;
+    font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-mute);
+    text-transform:uppercase; letter-spacing:.06em; border-top:1px solid var(--rule); padding-top:8px;
+  }
+  .analyst-sig .stamp{ margin-top:0; }
+
+  /* methodology */
+  .chain{ list-style:none; margin:0; padding:0;}
+  .chain li{
+    display:grid; grid-template-columns:26px 1fr; gap:10px; padding:10px 0;
+    border-bottom:1px solid var(--rule);
+  }
+  .chain li .step-no{
+    font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--stamp); font-weight:500;
+  }
+  .chain li .step-body{ font-size:13.5px; line-height:1.65; }
+  .chain li .step-body b{ font-weight:600; }
+
+
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div>
+      <div class="case-label">Case file no. ONS-DHI / 2024&ndash;25</div>
+      <h1 class="title">Domestic homicide in England &amp; Wales</h1>
+    </div>
+    <div class="meta-block">
+      Source: ONS Homicide Index<br>
+      Period: 2014&ndash;15 to 2024&ndash;25<br>
+      Status: closed series, current year
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <div class="tab active" data-tab="overview">01 — Overview</div>
+    <div class="tab" data-tab="whohow">02 — Who and how</div>
+    <div class="tab" data-tab="circumstances">03 — Circumstances</div>
+    <div class="tab" data-tab="justice">04 — The justice gap</div>
+    <div class="tab" data-tab="methodology">05 — Methodology</div>
+  </nav>
+
+  <div class="filter-bar">
+    <span class="fl-label">Filter by victim sex:</span>
+    <span class="fl-opt active" data-filter="all">All victims</span>
+    <span class="fl-opt" data-filter="female">Female victims</span>
+    <span class="fl-opt" data-filter="male">Male victims</span>
+  </div>
+
+  <!-- PAGE 1: OVERVIEW -->
+  <section class="panel active" id="overview">
+    <h2 class="page-head">Overview</h2>
+    <p class="page-sub">Headline figures for the latest recorded year, and the eleven-year trajectory of domestic homicide across England and Wales.</p>
+
+    <div class="kpi-row">
+      <div class="kpi" id="kpiTotal">
+        <div class="label" id="kpiTotalLabel">Domestic homicides, 2024&ndash;25</div>
+        <div class="value" id="kpiTotalValue">111</div>
+        <div class="delta down" id="kpiTotalDelta">&darr; 5.1% on 2023&ndash;24</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Change since 2014&ndash;15</div>
+        <div class="value">&minus;17.2%</div>
+        <div class="delta down">134 &rarr; 111 over 11 years</div>
+      </div>
+      <div class="kpi evi-wrap" id="kpiShare">
+        <span class="evi-tag kpi64" id="evi64">unbroken since 2014</span>
+        <div class="label" id="kpiShareLabel">Female victim, male suspect</div>
+        <div class="value" id="kpiShareValue">64.0%</div>
+        <div class="delta" id="kpiShareDelta">71 of 111 cases, 2024&ndash;25</div>
+        <div class="stamp" id="kpiShareStamp">largest category, every year</div>
+      </div>
+      <div class="kpi" id="kpiOther">
+        <div class="label" id="kpiOtherLabel">Male victim, female suspect</div>
+        <div class="value" id="kpiOtherValue">13</div>
+        <div class="delta" id="kpiOtherDelta">smallest of the four sex pairings</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Eleven-year trend, by sex pairing</h3>
+      <p class="note">All domestic homicides, against the two largest sex-pairing categories.</p>
+      <div class="legend-row">
+        <span><span class="swatch" style="background:var(--ink)"></span>All domestic homicides</span>
+        <span><span class="swatch" style="background:var(--stamp)"></span>Female victim &middot; male suspect</span>
+        <span><span class="swatch" style="background:var(--sage)"></span>Male victim &middot; female suspect</span>
+      </div>
+      <div class="chart-box"><canvas id="chartTrend" role="img" aria-label="Line chart of domestic homicides 2014-15 to 2024-25, total falling from 134 to 111, female-victim-male-suspect falling from 101 to 71, male-victim-female-suspect roughly flat between 6 and 17"></canvas></div>
+    </div>
+
+    <div class="narrative">
+      In 2024&ndash;25, 111 domestic homicides were recorded in England and Wales &mdash; a fall of 5.1% on the prior year, and a decline of 17.2% since 2014&ndash;15.
+    </div>
+
+    <div class="analyst-note">
+      <p>Three patterns in this file are worth sitting with. First, the female-victim&ndash;male-partner category isn't just the largest &mdash; it's the only one that has held that rank in every single year of the series, which suggests a structural risk rather than a fluctuating one. Second, the fall in overall numbers is real, but it's being driven almost entirely by that same category declining, not by any broad improvement across the board. Third, and most concerning to me: the justice-gap trend on page four has narrowed sharply in the latest year, but only because convictions fell, not because charging improved &mdash; that's a closing gap for the wrong reason, and worth flagging to anyone reading the headline number alone.</p>
+      <div class="analyst-sig">
+        <span>&mdash; Analyst, ONS-DHI desk</span>
+        <span class="stamp">reviewed</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 2: WHO AND HOW -->
+  <section class="panel" id="whohow">
+    <h2 class="page-head">Who and how</h2>
+    <p class="page-sub">Victim-suspect relationships for female and male victims of homicide, 2024&ndash;25, and the long-run trend for partner/ex-partner cases.</p>
+
+    <div class="section" id="partnerSection">
+      <h3>Partner / ex-partner homicide trend (female victims)</h3>
+      <p class="note">Counts by year, 2014&ndash;15 to 2024&ndash;25. Falls from 82 to 54 &mdash; the lowest point in the series.</p>
+      <div class="chart-box short"><canvas id="chartPartner" role="img" aria-label="Bar chart of female victims killed by partner or ex-partner by year, declining from 82 in 2014-15 to 54 in 2024-25"></canvas></div>
+      <p class="filter-note" id="partnerFilterNote" style="display:none;">This series only exists for female victims &mdash; shown regardless of filter.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="section" id="femaleSection">
+        <h3>Female victims, 2024&ndash;25 (n=155)</h3>
+        <table class="breakdown" id="tblFemale">
+          <thead><tr><th>Relationship</th><th>n</th><th>%</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="section" id="maleSection">
+        <h3>Male victims, 2024&ndash;25 (n=366)</h3>
+        <table class="breakdown" id="tblMale">
+          <thead><tr><th>Relationship</th><th>n</th><th>%</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="narrative">
+      Female victims killed by a male partner or ex-partner account for 64.0% of all domestic homicides in 2024&ndash;25 &mdash; the single largest category in the dataset, every year without exception. Male victims, by contrast, are most often killed by a suspect who was never charged or whose relationship to them is unknown.
+    </div>
+  </section>
+
+  <!-- PAGE 3: CIRCUMSTANCES -->
+  <section class="panel" id="circumstances">
+    <h2 class="page-head">Circumstances</h2>
+    <p class="page-sub">What sparked homicides among victims who were acquainted with their suspect, and how the leading circumstance has shifted since 2014&ndash;15.</p>
+
+    <div class="section">
+      <h3>Acquainted victims, 2024&ndash;25 (n=243)</h3>
+      <table class="breakdown" id="tblCirc">
+        <thead><tr><th>Circumstance</th><th>n</th><th>%</th><th></th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <p class="filter-note" id="circFilterNote" style="display:none;">The source table doesn't split circumstances by victim sex &mdash; shown unfiltered.</p>
+    </div>
+
+    <div class="section">
+      <h3>Quarrel, revenge or loss of temper &mdash; trend</h3>
+      <p class="note">Counts by year, acquainted victims only. Down 18.6% since 2014&ndash;15, with the sharpest single-year drop in 2024&ndash;25.</p>
+      <div class="chart-box short"><canvas id="chartQuarrel" role="img" aria-label="Line chart of quarrel revenge or loss of temper homicides among acquainted victims, rising from 177 in 2014-15 to a peak of 235 in 2018-19, then declining to 144 in 2024-25"></canvas></div>
+    </div>
+
+    <div class="narrative">
+      Among victims who were acquainted with their suspect, 59.3% of homicides in 2024&ndash;25 were sparked by quarrel, revenge, or loss of temper &mdash; not premeditation or financial motive. This remains the dominant circumstance throughout the eleven-year series, though its share has eased from the 2018&ndash;19 peak.
+    </div>
+  </section>
+
+  <!-- PAGE 4: JUSTICE GAP -->
+  <section class="panel" id="justice">
+    <h2 class="page-head">The justice gap</h2>
+    <p class="page-sub">Murder convictions against cases where no suspect was ever charged, over eleven years, and the resulting conviction and unsolved rates for 2024&ndash;25.</p>
+
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="label">Murder convictions, 2024&ndash;25</div>
+        <div class="value">158</div>
+        <div class="delta down">&minus;22.9% since 2014&ndash;15</div>
+        <div class="stamp">decade low</div>
+      </div>
+      <div class="kpi">
+        <div class="label">No suspect charged, 2024&ndash;25</div>
+        <div class="value">134</div>
+        <div class="delta up">+86.1% since 2014&ndash;15</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Conviction rate</div>
+        <div class="value">30.3%</div>
+        <div class="delta">of all recorded offences</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Unsolved rate</div>
+        <div class="value">25.7%</div>
+        <div class="delta">no suspect ever charged</div>
+      </div>
+    </div>
+
+    <div class="section evi-wrap">
+      <h3>Murder convictions vs. no suspect charged</h3>
+      <span class="evi-tag gapnarrow" id="eviGap">gap narrows to 24 &mdash; closest in 11 years</span>
+      <div class="legend-row">
+        <span><span class="swatch" style="background:var(--sage)"></span>Murder convictions</span>
+        <span><span class="swatch" style="background:var(--stamp)"></span>No suspect charged</span>
+      </div>
+      <div class="chart-box"><canvas id="chartJustice" role="img" aria-label="Line chart comparing murder convictions, falling from 205 to 158 with a sharp drop in the final year, against cases with no suspect charged, rising from 72 to 134 over the same eleven years"></canvas></div>
+      <p class="filter-note" id="justiceFilterNote" style="display:none;">Suspect outcomes aren't split by victim sex in the source data &mdash; shown unfiltered.</p>
+    </div>
+
+    <div class="narrative">
+      Murder convictions fell to 158 in 2024&ndash;25, the lowest figure in the eleven-year series, down 22.9% from 2014&ndash;15. Over the same period, cases where no suspect was charged reached 134 &mdash; the highest figure recorded across those eleven years.
+    </div>
+  </section>
+
+  <!-- PAGE 5: METHODOLOGY -->
+  <section class="panel" id="methodology">
+    <h2 class="page-head">Methodology</h2>
+    <p class="page-sub">Chain of custody for the figures in this file &mdash; from source workbook to the tables and charts shown above.</p>
+
+    <div class="section">
+      <h3>Source</h3>
+      <p style="font-size:13.5px; line-height:1.7; margin:0;">All figures are drawn from the <b>ONS Homicide Index</b>, appendix tables for the year ending March 2025. The original file is a single, heavily-merged Excel workbook with one worksheet per breakdown &mdash; sex pairings, victim relationships, suspect outcomes, and circumstances &mdash; each formatted for print rather than analysis.</p>
+    </div>
+
+    <div class="section">
+      <h3>Processing chain</h3>
+      <ol class="chain">
+        <li><span class="step-no">01</span><span class="step-body"><b>Extraction.</b> Each worksheet was read with pandas, targeting the fixed row ranges that hold the actual count cells, since headers and notes vary sheet to sheet.</span></li>
+        <li><span class="step-no">02</span><span class="step-body"><b>Reshaping.</b> Merged, wide-format cells (one row per category, one column per year) were unpivoted into long-format rows of <code>category, year, count</code> &mdash; the structure every chart and table on this site is built from.</span></li>
+        <li><span class="step-no">03</span><span class="step-body"><b>Footnote handling.</b> ONS appends bracketed footnote markers to cells (<code>[note 12]</code>, <code>[x]</code> for suppressed small counts). These were stripped with regular expressions; suppressed cells were set to zero rather than dropped, and are flagged in the underlying CSVs rather than silently hidden.</span></li>
+        <li><span class="step-no">04</span><span class="step-body"><b>Verification.</b> Reshaped totals were checked against the published ONS summary commentary before anything was treated as final.</span></li>
+      </ol>
+    </div>
+
+    <div class="narrative">
+      One issue surfaced during cleaning and is worth recording rather than quietly fixing: an early pass on the suspect-outcomes worksheet mis-set the starting column, which shifted every year's count one column to the left and understated the most recent year while overstating the earliest. It was caught because the resulting "2014&ndash;15 murder convictions" figure didn't match the equivalent number in the ONS's own published commentary &mdash; a reminder that anything in this file should ultimately trace back to a number ONS has stated themselves, not just to a script that ran without error.
+    </div>
+
+    <div class="section">
+      <h3>What this file does not contain</h3>
+      <p style="font-size:13.5px; line-height:1.7; margin:0;">Counts under official suppression thresholds, geographic detail below the England-and-Wales level, and any breakdown the published tables don't already provide (the circumstances and suspect-outcomes tables, for instance, are not split by victim sex at source &mdash; the filter control on this site is therefore inert on those two pages, by design rather than oversight).</p>
+    </div>
+  </section>
+
+  <footer class="foot">Preview build &middot; data: ONS Homicide Index, year ending March 2025 &middot; for the full site, this view scaffolds to Next.js + Tailwind + Recharts<br>Last updated: <span id="lastUpdated"></span></footer>
+</div>
+
+<script>
+const F = {
+  years: ["2014-15","2015-16","2016-17","2017-18","2018-19","2019-20","2020-21","2021-22","2022-23","2023-24","2024-25"],
+  allDomestic: [134,134,119,113,139,121,117,137,110,117,111],
+  fvms: [101,94,85,87,106,86,76,83,77,81,71],
+  mvfs: [8,17,12,11,15,6,10,17,13,11,13],
+  partner: [82,76,81,66,89,67,60,61,62,61,54],
+  quarrel: [177,184,213,227,235,207,208,201,192,185,144],
+  murder: [205,231,217,263,271,268,220,276,260,245,158],
+  noCharge: [72,78,106,130,133,131,104,137,96,96,134],
+  femaleRel: [
+    {r:"Partner/ex-partner", n:54, p:34.8},
+    {r:"No suspect charged", n:40, p:25.8},
+    {r:"Stranger", n:12, p:7.7},
+    {r:"Friend/acquaintance", n:12, p:7.7},
+    {r:"Other family", n:12, p:7.7},
+    {r:"Parent", n:9, p:5.8},
+    {r:"Son or daughter", n:6, p:3.9},
+    {r:"Other", n:5, p:3.2},
+    {r:"Relationship not known", n:5, p:3.2}
+  ],
+  maleRel: [
+    {r:"No suspect charged", n:111, p:30.3},
+    {r:"Friend/acquaintance", n:71, p:19.4},
+    {r:"Stranger", n:63, p:17.2},
+    {r:"Relationship not known", n:47, p:12.8},
+    {r:"Other", n:28, p:7.7},
+    {r:"Partner/ex-partner", n:13, p:3.6},
+    {r:"Parent", n:13, p:3.6},
+    {r:"Son or daughter", n:10, p:2.7},
+    {r:"Other family", n:10, p:2.7}
+  ],
+  circ: [
+    {c:"Quarrel, revenge or loss of temper", n:144, p:59.3},
+    {c:"Not known", n:37, p:15.2},
+    {c:"Other circumstances", n:36, p:14.8},
+    {c:"In furtherance of theft or gain", n:11, p:4.5},
+    {c:"Irrational act", n:11, p:4.5},
+    {c:"Arson", n:4, p:1.6},
+    {c:"Restraint/arrest attempt", n:0, p:0.0},
+    {c:"Terrorism", n:0, p:0.0}
+  ]
+};
+
+const INK = "#211F1C", STAMP = "#8C2F2A", SAGE = "#54624A", MUTE = "#6B665A", GRID = "#DDD5C2";
+
+Chart.defaults.font.family = "'IBM Plex Mono', monospace";
+Chart.defaults.font.size = 11;
+Chart.defaults.color = MUTE;
+
+function lineOpts(extra){
+  return Object.assign({
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:false} },
+    scales:{
+      x:{ grid:{display:false}, ticks:{ autoSkip:false, maxRotation:45 } },
+      y:{ grid:{color:GRID}, ticks:{ precision:0 } }
+    }
+  }, extra||{});
+}
+
+const chartTrend = new Chart(document.getElementById('chartTrend'), {
+  type:'line',
+  data:{ labels:F.years, datasets:[
+    { label:'All domestic', data:F.allDomestic, borderColor:INK, backgroundColor:INK, borderWidth:2, pointRadius:3, tension:0.15 },
+    { label:'Female victim / male suspect', data:F.fvms, borderColor:STAMP, backgroundColor:STAMP, borderWidth:2, pointRadius:3, tension:0.15 },
+    { label:'Male victim / female suspect', data:F.mvfs, borderColor:SAGE, backgroundColor:SAGE, borderWidth:2, pointRadius:3, tension:0.15 }
+  ]},
+  options: lineOpts()
+});
+
+const chartPartner = new Chart(document.getElementById('chartPartner'), {
+  type:'bar',
+  data:{ labels:F.years, datasets:[{ data:F.partner, backgroundColor:STAMP, borderRadius:3, maxBarThickness:24 }]},
+  options: lineOpts({ plugins:{legend:{display:false}, tooltip:{enabled:true}} })
+});
+
+const chartQuarrel = new Chart(document.getElementById('chartQuarrel'), {
+  type:'line',
+  data:{ labels:F.years, datasets:[{ data:F.quarrel, borderColor:SAGE, backgroundColor:SAGE, borderWidth:2, pointRadius:3, tension:0.15, fill:false }]},
+  options: lineOpts()
+});
+
+const chartJustice = new Chart(document.getElementById('chartJustice'), {
+  type:'line',
+  data:{ labels:F.years, datasets:[
+    { label:'Murder convictions', data:F.murder, borderColor:SAGE, backgroundColor:SAGE, borderWidth:2, pointRadius:3, tension:0.15 },
+    { label:'No suspect charged', data:F.noCharge, borderColor:STAMP, backgroundColor:STAMP, borderWidth:2, pointRadius:3, tension:0.15 }
+  ]},
+  options: lineOpts()
+});
+
+function fillTable(id, rows, keyName){
+  const tb = document.querySelector('#'+id+' tbody');
+  rows.forEach(row=>{
+    const tr = document.createElement('tr');
+    const label = row.r !== undefined ? row.r : row.c;
+    tr.innerHTML = `<td>${label}</td><td class="num">${row.n}</td><td class="num">${row.p.toFixed(1)}%</td>`;
+    tb.appendChild(tr);
+  });
+}
+fillTable('tblFemale', F.femaleRel);
+fillTable('tblMale', F.maleRel);
+
+const circBody = document.querySelector('#tblCirc tbody');
+F.circ.forEach(row=>{
+  const tr = document.createElement('tr');
+  tr.innerHTML = `<td>${row.c}</td><td class="num">${row.n}</td><td class="num">${row.p.toFixed(1)}%</td>
+    <td style="width:90px;"><div class="bar-track"><div class="bar-fill" style="width:${row.p}%"></div></div></td>`;
+  circBody.appendChild(tr);
+});
+
+document.querySelectorAll('.tab').forEach(t=>{
+  if(t.classList.contains('redacted')) return;
+  t.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    document.getElementById(t.dataset.tab).classList.add('active');
+  });
+});
+
+document.getElementById('lastUpdated').textContent = new Date().toISOString().slice(0,10);
+
+function applyFilter(mode){
+  document.querySelectorAll('.fl-opt').forEach(o=>o.classList.toggle('active', o.dataset.filter===mode));
+
+  if(mode==='all'){
+    chartTrend.data.datasets[0].hidden = false;
+    chartTrend.data.datasets[1].hidden = false;
+    chartTrend.data.datasets[2].hidden = false;
+    document.getElementById('kpiTotalLabel').textContent = 'Domestic homicides, 2024–25';
+    document.getElementById('kpiTotalValue').textContent = '111';
+    document.getElementById('kpiTotalDelta').textContent = '↓ 5.1% on 2023–24';
+    document.getElementById('kpiShareLabel').textContent = 'Female victim, male suspect';
+    document.getElementById('kpiShareValue').textContent = '64.0%';
+    document.getElementById('kpiShareDelta').textContent = '71 of 111 cases, 2024–25';
+    document.getElementById('kpiOtherLabel').textContent = 'Male victim, female suspect';
+    document.getElementById('kpiOtherValue').textContent = '13';
+    document.getElementById('kpiOtherDelta').textContent = 'smallest of the four sex pairings';
+    document.getElementById('femaleSection').style.display = '';
+    document.getElementById('maleSection').style.display = '';
+  } else if(mode==='female'){
+    chartTrend.data.datasets[0].hidden = true;
+    chartTrend.data.datasets[1].hidden = false;
+    chartTrend.data.datasets[2].hidden = true;
+    document.getElementById('kpiTotalLabel').textContent = 'Female domestic victims, 2024–25';
+    document.getElementById('kpiTotalValue').textContent = '155';
+    document.getElementById('kpiTotalDelta').textContent = 'of 155, 71 killed by a male partner/ex-partner';
+    document.getElementById('kpiShareLabel').textContent = 'Killed by partner/ex-partner';
+    document.getElementById('kpiShareValue').textContent = '34.8%';
+    document.getElementById('kpiShareDelta').textContent = '54 of 155 female victims, 2024–25';
+    document.getElementById('kpiOtherLabel').textContent = 'Killed by a stranger';
+    document.getElementById('kpiOtherValue').textContent = '12';
+    document.getElementById('kpiOtherDelta').textContent = '7.7% of female victims';
+    document.getElementById('femaleSection').style.display = '';
+    document.getElementById('maleSection').style.display = 'none';
+  } else if(mode==='male'){
+    chartTrend.data.datasets[0].hidden = true;
+    chartTrend.data.datasets[1].hidden = true;
+    chartTrend.data.datasets[2].hidden = false;
+    document.getElementById('kpiTotalLabel').textContent = 'Male domestic victims, 2024–25';
+    document.getElementById('kpiTotalValue').textContent = '366';
+    document.getElementById('kpiTotalDelta').textContent = 'of 366, 111 had no suspect charged';
+    document.getElementById('kpiShareLabel').textContent = 'No suspect charged';
+    document.getElementById('kpiShareValue').textContent = '30.3%';
+    document.getElementById('kpiShareDelta').textContent = '111 of 366 male victims, 2024–25';
+    document.getElementById('kpiOtherLabel').textContent = 'Killed by partner/ex-partner';
+    document.getElementById('kpiOtherValue').textContent = '13';
+    document.getElementById('kpiOtherDelta').textContent = '3.6% of male victims';
+    document.getElementById('femaleSection').style.display = 'none';
+    document.getElementById('maleSection').style.display = '';
+  }
+  chartTrend.update();
+
+  const inert = mode !== 'all';
+  document.getElementById('circFilterNote').style.display = inert ? '' : 'none';
+  document.getElementById('justiceFilterNote').style.display = inert ? '' : 'none';
+  document.getElementById('partnerFilterNote').style.display = (mode==='male') ? '' : 'none';
+}
+
+document.querySelectorAll('.fl-opt').forEach(o=>{
+  o.addEventListener('click', ()=> applyFilter(o.dataset.filter));
+});
+</script>
+</body>
+</html>
